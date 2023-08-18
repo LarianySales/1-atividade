@@ -1,33 +1,30 @@
 const express = require('express')
 const app = express()
-const port = 3590
+const port = 5009
+
 const path = require('path')
-const basePath = path.join(__dirname,'templates')
+const basePath = path.join(__dirname,'template')
 
 app.use(express.urlencoded({
     extended:true
 }))
 app.use(express.json())
 
+const meusProdutos = require('./meusProdutos')
+app.use('/meusProdutos',meusProdutos)
 
 app.get('/',(req,res)=>{
-    res.sendFile(`${basePath}/index.html`)
+    res.sendFile(`${basePath}/home.html`)
+})
+app.get('/add',(req,res)=>{
+    res.sendFile(`${basePath}/cadastrarProduto.html`)
+})
+app.post('/save',(req, res)=>{
+    const {nome ,preco, descricao} = req.body
+
+    res.sendFile(`${basePath}/visualizarProduto.html`)
 })
 
-
-
-app.get('/contato/add',(req,res)=>{
-    res.sendFile(`${basePath}/formContato.html`)
-})
-app.post('/contato/save',(req,res)=>{
-    const {name, age , tell, email} = req.body
-
- console.log(express.json())
-
-})
-app.get('/curso',(req,res)=>{
-    res.sendFile(`${basePath}/cursos.html`)
-})
 app.listen(port,()=>{
-    console.log(`Servidor on ${port} 👻`)
+    console.log(`Servidor on ${port}`)
 })
