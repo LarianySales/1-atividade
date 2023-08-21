@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+</head>
+<style>
+    body{
+        background-color: rgb(196, 187, 255);
+        text-align: center;
+     
+    }
+    a{
+        text-decoration: none;
+        color: rgb(255, 254, 254);
+        margin-left: 30px;
+        font-size: 14px;
+    }
+    h1{
+        color: aliceblue;
+    }
+    a:hover{
+        color: rgb(0, 0, 0);
+        font-size: 17px;
+    }
+    header{
+        /* margin-top: 100px; */
+        background-color: rgba(43, 0, 63, 0.418);
+        padding: 30px;
+    }
+    input{
+        border: none;
+        margin-top: 10px;
+      height: 20px;
+    }
+#submit{
+    margin-top: 30px;
+    width: 80px;
+    height: 30px;
+    background-color: rgb(22, 11, 34);
+    color: aliceblue;
+}
+#submit:hover{
+    background-color: rgb(203, 154, 255);
+    color: rgb(0, 26, 49);
+}
+form{
+    display: flex;
+    flex-direction: column;
+    margin: 100px 80vh;
+ align-items: center;
+ justify-content: center;
+    background-color: rgba(91, 49, 131, 0.473);
+    padding: 50px;
+    width: 200px;
+}
+div{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: aliceblue;
+    font-size: 18px;
+}
+input:focus{
+    background-color: rgb(196, 224, 255);
+    color: indigo;
+}
+
+</style>
+<body>
+   <header>
+    <h1>Cadastre o produto</h1>
+    <a href="./home.html">Home</a>
+    <a href="./visualizarProduto.html">Visualizar</a>
+   </header>
+    <form action="/cadastrarProdutos" method="post">
+        <div>
+            <label for="nome">Nome do produto: </label><input type="text" name="nome" required  placeholder="Digite o nome ">
+        </div>
+
+        <div>
+            <label  for="preco">Preço do Produto: </label><input type="text" name="preco" required  placeholder="Digite o preço">
+        </div>
+
+        <div>
+            <label for="descricao">Descrição do produto:</label><input type="text" name="descricao" required  placeholder="Digite a descricao">
+        </div>
+
+        <div>
+            <input id="submit" type="submit" value="Cadastrar">
+        </div>
+
+    </form>
+
+</body>
+
+</html>
