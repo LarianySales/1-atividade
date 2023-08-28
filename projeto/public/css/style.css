@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:rgb(214, 206, 255);
+}
+section{
+    margin-top: 70px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+h1{
+    margin: 20px 45px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(6, 1, 53);
+    text-decoration:double;
+}
+
+nav{
+    background-color: rgb(155, 141, 238);
+    padding: 40px;
+    font-size: 28px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: rgb(248, 234, 237);
+}
+img{
+    width: 300px;
+    height: 300px;
+}
